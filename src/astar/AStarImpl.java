@@ -66,8 +66,11 @@ public class AStarImpl {
 			}
 		}
 		
-		for (Point point : finalPath) {
-			System.out.print( "(" + point.getX() + ", " + point.getY() + ")");
+		for (int i = finalPath.size() - 1; i >= 0; i--) {
+			System.out.print( "(" + finalPath.get(i).getX() + ", " + finalPath.get(i).getY() + ")");
+			if(i != 0){
+				System.out.print("->");
+			}
 		}
 	}
 	
