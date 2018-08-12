@@ -6,8 +6,7 @@ public class Graph {
 	int vertex;
 	ArrayList<ArrayList<Point>> adjList;
 
-	public Graph(int v) {
-		vertex = v;
+	public Graph() {
 		adjList = new ArrayList<ArrayList<Point>>();
 	}
 
@@ -44,14 +43,15 @@ public class Graph {
 	}
 
 	public void printGraph() {
+		System.out.println("Adjacency List:");
 		for(int i = 0; i < adjList.size(); i++) {
 			for (int j = 0; j < adjList.get(i).size(); j++) {
 				System.out.print( "(" + adjList.get(i).get(j).getX() + ", " + adjList.get(i).get(j).getY() + ")");
 				if(j < adjList.get(i).size() - 1){
-					System.out.print("->");
+					System.out.print("<->");
 				}
 			}
-			System.out.println("\n");
+			System.out.print("\n");
 		}
 	}
 
@@ -76,13 +76,5 @@ public class Graph {
 
 	public ArrayList<ArrayList<Point>> getGraph(){
 		return adjList;
-	}
-
-	public void test() {
-		addEdge(new Point(0,0,0.0), new Point(0, 1, 0.0));
-		addEdge(new Point(0,1,0.0), new Point(0, 2, 0.0));
-		addEdge(new Point(0,1,0.0), new Point(0, 3, 0.0));
-
-		printGraph();
-	}
+	}	
 }
