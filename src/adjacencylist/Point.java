@@ -10,6 +10,12 @@ public class Point implements Comparable<Point>{
 		this.y = y;
 		this.costSoFar = costSoFar;
 	}
+	public Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+		this.costSoFar = 0.0;
+	}
+	
 	public int getX() {
 		return x;
 	}

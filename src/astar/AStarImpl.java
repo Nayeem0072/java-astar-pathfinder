@@ -77,9 +77,10 @@ public class AStarImpl {
 	public void testGraph(){
 		Graph g = new Graph(4);
 		g.createGraph();
+		g.printGraph();
 		ArrayList<ArrayList<Point>> arr = g.getGraph();
 
-		aStarCostCalc(arr, new Point(0, 0, 0.0), new Point(0, 3, 0.0));
+		aStarCostCalc(arr, new Point(0, 0, 0.0), new Point(1, 2, 0.0));
 
 
 
