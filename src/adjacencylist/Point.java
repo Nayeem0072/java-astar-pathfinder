@@ -3,17 +3,17 @@ package adjacencylist;
 public class Point implements Comparable<Point>{
 	int x;
 	int y;
-	double costSoFar;
+	double fcost;
 
 	public Point(int x, int y, double costSoFar) {
 		this.x = x;
 		this.y = y;
-		this.costSoFar = costSoFar;
+		this.fcost = costSoFar;
 	}
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
-		this.costSoFar = 0.0;
+		this.fcost = 0.0;
 	}
 	
 	public int getX() {
@@ -29,15 +29,15 @@ public class Point implements Comparable<Point>{
 		this.y = y;
 	}
 
-	public double getCostSoFar() {
-		return costSoFar;
+	public double getFcost() {
+		return fcost;
 	}
-	public void setCostSoFar(double priority) {
-		this.costSoFar = priority;
+	public void setFcost(double priority) {
+		this.fcost = priority;
 	}
 	@Override
 	public int compareTo(Point p1) {
-		return (int)(this.costSoFar - p1.getCostSoFar());
+		return (int)(this.fcost - p1.getFcost());
 	}	
 
 	public static boolean comparePoints (Point p1, Point p2) {

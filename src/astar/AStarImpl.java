@@ -44,7 +44,7 @@ public class AStarImpl {
 					if (!costSoFar.containsKey(neighbor) || fcost < costSoFar.get(neighbor)){
 						costSoFar.put(neighbor, fcost);
 						double priority = fcost + heuristicManhattan(neighbor, goal);
-						neighbor.setCostSoFar(priority);
+						neighbor.setFcost(priority);
 						openPoints.add(neighbor);
 						cameFrom.put(neighbor, curPoint);
 					}
@@ -81,7 +81,7 @@ public class AStarImpl {
 		g.printGraph();
 		ArrayList<ArrayList<Point>> arr = g.getGraph();
 
-		aStarCostCalc(arr, new Point(0, 0, 0.0), new Point(1, 2, 0.0));
+		aStarCostCalc(arr, new Point(0, 0), new Point(1, 2));
 
 
 
